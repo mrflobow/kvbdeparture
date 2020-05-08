@@ -21,7 +21,7 @@ class KVBDepartureSensor(Entity):
         }
         self._stationid = stationid
         self._hass = hass
-        self._hass.custom_attributes = {}
+        self._attributes = {}
 
     @property
     def name(self):
@@ -43,7 +43,7 @@ class KVBDepartureSensor(Entity):
     @property
     def device_state_attributes(self):
         """Return the state attributes of the sensor."""
-        return self._hass.custom_attributes
+        return self._attributes
 
     def update(self):
         """Fetch new state data for the sensor.
@@ -68,11 +68,9 @@ class KVBDepartureSensor(Entity):
                 line_id = int(line_id)
             except ValueError:
                 pass
-            print(line_id, direction, time)
             departures.append(
                 {"line_id": line_id, "direction": direction, "wait_time": time}
             )
-        attributes = {}
-        attributes["departures"] = departures
-        self._hass.custom_attributes = attributes
+
+        self._attributes["departures"] = departures
         self._state = True
