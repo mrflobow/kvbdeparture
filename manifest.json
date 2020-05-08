@@ -1,0 +1,11 @@
+{
+  "domain": "kvbdeparture",
+  "name": "KVB Departure Sensor",
+  "documentation": "https://www.home-assistant.io/integrations/kvbdeparture",
+  "requirements": ["beautifulsoup4==4.9.0"],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": [],
+  "codeowners": ["@mrflobow"]
+}
