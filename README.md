@@ -1,14 +1,15 @@
 # KVB Depature Sensor
-A Custom Departure Sensor for KVB
+KVB Departure Sensor for using with Home Assistant
 
 # Installation
 Copy content to ../config/custom_components/
 
 Add sensor to your configuration.yaml
 
-```
+```yaml
 sensors:
-  - platform: kvbdeparture
-	stationid: 308
+- platform: kvbdeparture
+  stationname: Main Station
+  stationid: 308
 
 ```

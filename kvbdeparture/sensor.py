@@ -7,13 +7,13 @@ from bs4 import BeautifulSoup
 
 def setup_platform(hass, config, add_entities, discovery_info=None):
     """Set up the sensor platform."""
-    add_entities([KVBDepartureSensor(hass, config["stationid"])])
+    add_entities([KVBDepartureSensor(hass, config["stationid"], config["stationname"])])
 
 
 class KVBDepartureSensor(Entity):
     """Representation of a Sensor."""
 
-    def __init__(self, hass, stationid):
+    def __init__(self, hass, stationid, stationname):
         """Initialize the sensor."""
         self._state = None
         self._headers = {
@@ -22,6 +22,7 @@ class KVBDepartureSensor(Entity):
         self._stationid = stationid
         self._hass = hass
         self._attributes = {}
+        self._attributes["stationname"] = stationname
 
     @property
     def name(self):

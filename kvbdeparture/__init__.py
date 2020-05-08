@@ -3,5 +3,5 @@
 import voluptuous as vol
 
 
-PLATFORM_SCHEMA = vol.Schema({"stationid": int})
+PLATFORM_SCHEMA = vol.Schema({"stationid": int, "stationname": str})
 PLATFORMS = ["sensor"]
