@@ -54,7 +54,7 @@ class KVBDepartureSensor(Entity):
         url = "https://www.kvb.koeln/qr/{}/".format(self._stationid)
         req = requests.get(url, headers=self._headers)
         soup = BeautifulSoup(req.text, features="html.parser")
-        tables = soup.find_all("table", class_="display")
+        tables = soup.find_all("table", id="qr_ergebnis")
         departures = []
         for row in tables[0].find_all("tr"):
             tds = row.find_all("td")
