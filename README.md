@@ -1,4 +1,4 @@
-# KVB Depature
+# KVB Departure
 HomeAssistant custom sensor for Cologne, Germany public transportation (KVB)
 
 # Installation
