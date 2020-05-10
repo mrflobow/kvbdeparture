@@ -1,4 +1,4 @@
-# KVB Depature Sensor
+# KVB Depature
 HomeAssistant custom sensor for Cologne, Germany public transportation (KVB)
 
 # Installation
