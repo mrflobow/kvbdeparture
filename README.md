@@ -1,5 +1,5 @@
 # KVB Depature Sensor
-KVB Departure Sensor for using with Home Assistant
+HomeAssistant custom sensor for Cologne, Germany public transportation (KVB)
 
 # Installation
 Copy content to ../config/custom_components/
